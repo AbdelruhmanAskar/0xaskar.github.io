@@ -7,7 +7,7 @@ tags: [CTF, OSINT, Investigation, CyberCrime, Author]
 author_profile: true
 ---
 
-# 🕵️‍♂️ OSINT Challenge: A Weird Combo
+# 🕵️‍♂️ OSINT Series: The Author's Writeups
 
 Hello everyone! 
 
