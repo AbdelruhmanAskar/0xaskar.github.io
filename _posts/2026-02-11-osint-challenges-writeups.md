@@ -20,7 +20,6 @@ Below are the writeups for the 4 OSINT challenges I designed, ordered from **Eas
 ---
 
 ## 2. A Weird Challenge (Medium)
-=============================================
 
 ## 📝 The Challenge Description
 
@@ -94,8 +93,7 @@ The phone number listed is `01111132001`.
 
 ---
 
-Operation: Ghost in the Cage (Hard)
-=============================================
+## 3. Operation: Ghost in the Cage (Hard)
 
 ## 💀 The Challenge Description
 
