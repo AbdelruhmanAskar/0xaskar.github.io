@@ -91,13 +91,15 @@ The phone number listed is `01111132001`.
 
 **Final Flag:** `N!ghtM4re{01111132001}`
 
----
+==============================================
 
 ## 3. Operation: Ghost in the Cage (Hard)
 
 ## 💀 The Challenge Description
 
-In this "Hard" difficulty OSINT challenge, we are tasked with tracking down a high-ranking Russian cybercriminal on the FBI’s Cyber Most Wanted list. This individual is a specialist in "Carding"—the large-scale theft and sale of financial access devices and stolen identities.
+> "A high-ranking individual on the **FBI’s Cyber Most Wanted** list is known for operating one of the most sophisticated **Carding Shops** in the underground scene.
+> This Russian national specialized in the large-scale theft and sale of financial access devices and stolen identities.
+> He didn't just sell credentials; he managed a massive digital warehouse that bridged the gap between raw data and illegal profit. His operation was a primary source for cyber-criminals worldwide, providing the keys to thousands of private accounts and financial platforms."
 
 **Criminal Profile:**
 
