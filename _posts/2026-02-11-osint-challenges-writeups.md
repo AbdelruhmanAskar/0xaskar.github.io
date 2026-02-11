@@ -31,7 +31,7 @@ I created an OSINT challenge called **"A Weird Combo"**. It was a fun experience
 
 First, I had a photo of a metro station. I used **Google Reverse Image Search** and added the keyword "Metro" to help the search engine.
 
-![Reverse Search Result]([/assets/images/Reverse%20image.png](https://github.com/AbdelruhmanAskar/0xaskar.github.io/blob/master/assets/images/Reverse%20image.png))
+![Reverse Search Result](/assets/images/reverse-image.png)
 
 The search confirmed that the starting point is **Kolleyet El-Zeraa Station** (Faculty of Agriculture). 
 
@@ -45,7 +45,7 @@ I checked the official [Cairo Metro website](https://www.cairometro.gov.eg/ar/st
 1. **Shobra El-Kheima Station**
 2. **Mazallat Station**
 
-![Metro Map]([/assets/images/Paths.png](https://github.com/AbdelruhmanAskar/0xaskar.github.io/blob/master/assets/images/Paths.png))
+![Metro Map](/assets/images/paths.png)
 
 ---
 
@@ -66,13 +66,13 @@ The description mentioned a restaurant right outside the exit with a very strang
 
 I went to **Google Maps**, searched near Mazallat Station, and looked for restaurants.
 
-![Google Maps Search]([/assets/images/google%20map.png](https://github.com/AbdelruhmanAskar/0xaskar.github.io/blob/master/assets/images/google%20map.png))
+![Google Maps Search](/assets/images/google-map.png)
 
 I found it: **"Kebda w Mokh w Crepe El-Iman Asran" (كبدة ومخ وكريب الايمان عصران)**. The name is definitely a "mouthful"!
 
 I checked the **"About"** section on Google Maps to find the phone number.
 
-![Restaurant Phone Number]([/assets/images/Resturant.png](https://github.com/AbdelruhmanAskar/0xaskar.github.io/blob/master/assets/images/Resturant.png))
+![Restaurant Phone Number](/assets/images/resturant.png)
 
 ---
 
