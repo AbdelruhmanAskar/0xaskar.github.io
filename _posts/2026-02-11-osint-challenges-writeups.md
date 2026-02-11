@@ -182,11 +182,11 @@ Python
     # Use hex decoder to reveal the secure endpoint
     INTERNAL_GATEWAY = "68747470733a2f2f742e6d652f666c6f726162795f63616765" 
 
-![[Python Code](https://raw.githubusercontent.com/AbdelruhmanAskar/0xaskar.github.io/refs/heads/master/assets/images/Opeartion%20Ghost%20in%20the%20Cage/Python-Code.png)
+![Python Code](https://raw.githubusercontent.com/AbdelruhmanAskar/0xaskar.github.io/refs/heads/master/assets/images/Opeartion%20Ghost%20in%20the%20Cage/Python-Code.png)
 
 **Decoding the Payload:** I took the hex string to **CyberChef**. Using the **"From Hex"** operation, it revealed a hidden Telegram link: `https://t.me/floraby_cage`
 
-![[CyberChef](https://raw.githubusercontent.com/AbdelruhmanAskar/0xaskar.github.io/refs/heads/master/assets/images/Opeartion%20Ghost%20in%20the%20Cage/CyberChef.png)
+![CyberChef](https://raw.githubusercontent.com/AbdelruhmanAskar/0xaskar.github.io/refs/heads/master/assets/images/Opeartion%20Ghost%20in%20the%20Cage/CyberChef.png)
 
 * * *
 
@@ -194,17 +194,17 @@ Python
 
 The link led to a private Telegram channel named **floraby\_cage**. The channel was used to post marketplace inventory (Cookies, SSNs, and bank logs).
 
-![[Telegram Channel](https://raw.githubusercontent.com/AbdelruhmanAskar/0xaskar.github.io/refs/heads/master/assets/images/Opeartion%20Ghost%20in%20the%20Cage/Channel.png)
+![Telegram Channel](https://raw.githubusercontent.com/AbdelruhmanAskar/0xaskar.github.io/refs/heads/master/assets/images/Opeartion%20Ghost%20in%20the%20Cage/Channel.png)
 
 However, the author of the challenge, **0xaskar**, had already compromised the channel, leaving a "Seizure Notice" post:
 
 > **🚫 SEIZED BY 0xaskar** _"To the 'Ghost' running this channel: Your OpSec was good, but your history was better. I left a little souvenir in your backup file."_
 
-![[0xaskar Message](https://raw.githubusercontent.com/AbdelruhmanAskar/0xaskar.github.io/refs/heads/master/assets/images/Opeartion%20Ghost%20in%20the%20Cage/Seized-by-0xaskar.png)
+![0xaskar Message](https://raw.githubusercontent.com/AbdelruhmanAskar/0xaskar.github.io/refs/heads/master/assets/images/Opeartion%20Ghost%20in%20the%20Cage/Seized-by-0xaskar.png)
 
 **The Backup File:** The post contained a file: `Marketplace_A_Full_Backup.zip`. Upon trying to open it, I was prompted for a password.
 
-![[Unzip Folder](https://raw.githubusercontent.com/AbdelruhmanAskar/0xaskar.github.io/refs/heads/master/assets/images/Opeartion%20Ghost%20in%20the%20Cage/Extract-Files.png)
+![Unzip Folder](https://raw.githubusercontent.com/AbdelruhmanAskar/0xaskar.github.io/refs/heads/master/assets/images/Opeartion%20Ghost%20in%20the%20Cage/Extract-Files.png)
 
 **The Password Hint:**
 
@@ -224,7 +224,7 @@ Inside the archive, I found two files:
     
 2.  `0xaskar_was_here_you_are_late.jpg` (A photo of the suspect).
 
-![[Suspect Photo](https://raw.githubusercontent.com/AbdelruhmanAskar/0xaskar.github.io/refs/heads/master/assets/images/Opeartion%20Ghost%20in%20the%20Cage/0xaskar_was_here_you_are_late.png)
+![Suspect Photo](https://raw.githubusercontent.com/AbdelruhmanAskar/0xaskar.github.io/refs/heads/master/assets/images/Opeartion%20Ghost%20in%20the%20Cage/0xaskar_was_here_you_are_late.png)
     
 
 **The Final Clue:** The text file contained a taunt:
@@ -235,7 +235,7 @@ This directed me toward **Metadata analysis**. I used `exiftool` to inspect the 
 
 **Command:** `exiftool 0xaskar_was_here_you_are_late.jpg`
 
-![[Exiftool Result](https://raw.githubusercontent.com/AbdelruhmanAskar/0xaskar.github.io/refs/heads/master/assets/images/Opeartion%20Ghost%20in%20the%20Cage/Exiftool.png)
+![Exiftool Result](https://raw.githubusercontent.com/AbdelruhmanAskar/0xaskar.github.io/refs/heads/master/assets/images/Opeartion%20Ghost%20in%20the%20Cage/Exiftool.png)
 
 **The Result:** Inside the metadata tags, the flag was hidden within the **Artist** field:
 
