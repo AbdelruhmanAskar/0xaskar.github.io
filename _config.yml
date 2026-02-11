@@ -3,6 +3,7 @@ email: "askr10.askr@gmail.com"
 description: "Penetration Tester | CTF Player | Cybersecurity enthusiast with a strong interest in web security and ethical hacking <3."
 url: "https://0xaskar.github.io"
 baseurl: ""
+site_favicon: "https://github.com/AbdelruhmanAskar.png"
 github_username: "AbdelruhmanAskar"
 minimal_mistakes_skin: "dark"
 search: true
