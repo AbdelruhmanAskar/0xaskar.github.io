@@ -1,36 +1,23 @@
-title: 0xaskar
-email: askr10.askr@gmail.com
-description: Penetration Tester | CTF Player Cybersecurity enthusiast with a strong interest in web security and ethical hacking <3.
-github_username: AbdelruhmanAskar
-minimal_mistakes_skin: dark
+title: "0xaskar"
+email: "askr10.askr@gmail.com"
+description: "Penetration Tester | CTF Player | Cybersecurity enthusiast with a strong interest in web security and ethical hacking <3."
+url: "https://abdelruhmanaskar.github.io"
+github_username: "AbdelruhmanAskar"
+minimal_mistakes_skin: "dark"
 search: true
 
-# Build settings
 markdown: kramdown
-remote_theme: mmistakes/minimal-mistakes
+remote_theme: "mmistakes/minimal-mistakes@4.27.3"
 repository: "AbdelruhmanAskar/0xaskar.github.io"
-# Outputting
+
 permalink: /:categories/:title/
-paginate: 5 # amount of posts to show
+paginate: 5 
 paginate_path: /page:num/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: "Africa/Cairo"
 
 include:
   - _pages
 
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
-
-# Plugins (previously gems:)
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
@@ -40,9 +27,9 @@ plugins:
   - jekyll-include-cache
 
 author:
-  name   : "0xaskar"
-  avatar : "https://github.com/AbdelruhmanAskar.png"
-  bio    : "Welcome to my personal blog where I share my journey."
+  name    : "0xaskar"
+  avatar  : "https://github.com/AbdelruhmanAskar.png"
+  bio     : "Penetration Tester | CTF Player"
   links:
     - label: "Medium"
       icon: "fab fa-fw fa-medium"
@@ -73,7 +60,6 @@ footer:
       url: "https://github.com/AbdelruhmanAskar"
 
 defaults:
-  # _posts
   - scope:
       path: ""
       type: posts
@@ -84,13 +70,6 @@ defaults:
       comments: true
       share: true
       related: true
-  # _pages
-  - scope:
-      path: "_pages"
-      type: pages
-    values:
-      layout: single
-      author_profile: true
 
 category_archive:
   type: liquid
