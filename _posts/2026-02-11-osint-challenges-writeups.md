@@ -23,6 +23,8 @@ Below are the writeups for the 3 OSINT challenges I designed, ordered from **Eas
 
 ## **📝 The Challenge Description**
 
+![Challenge Photo](https://raw.githubusercontent.com/AbdelruhmanAskar/0/refs/heads/master/assets/images/A%20Royal%20Neighbor/The%20Royal%20Neighbor.png)
+
 > "I was wandering around this academic building when I decided to take a break. Just a few steps away, I entered a nearby garden and stumbled upon a fountain featuring a dragon's head. It looked quite familiar, almost like it was designed by a legendary architect who shaped the whole city.
 > 
 > I took a photo of the faculty building before I left. Can you find the name of that hidden dragon fountain?"
@@ -85,6 +87,8 @@ The description mentioned a fountain with a **dragon's head** designed by a **le
 ## 2. A Weird Challenge (Medium)
 
 ## 📝 The Challenge Description
+
+![Challenge Photo](https://raw.githubusercontent.com/AbdelruhmanAskar/0/refs/heads/master/assets/images/A%20Weird%20Combo%20WriteUp/A%20Weird%20Combo.png)
 
 > "I took this photo right before hopping on the metro. I was starving, so I only rode for one station and got off. The station I arrived at made me feel like I was protected from the rain, even though the sun was shining!
 > 
@@ -159,6 +163,8 @@ The phone number listed is `01111132001`.
 ## 3. Operation: Ghost in the Cage (Hard)
 
 ## 💀 The Challenge Description
+
+![Challenge Photo](https://raw.githubusercontent.com/AbdelruhmanAskar/0/refs/heads/master/assets/images/Opeartion%20Ghost%20in%20the%20Cage/Opeartion%20Ghost%20in%20the%20Cage.png)
 
 > "A high-ranking individual on the **FBI’s Cyber Most Wanted** list is known for operating one of the most sophisticated **Carding Shops** in the underground scene.
 > This Russian national specialized in the large-scale theft and sale of financial access devices and stolen identities.
