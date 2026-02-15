@@ -104,21 +104,21 @@ The moment I hit **Login**, the system's defenses crumbled, granting me full acc
     
 *   **Author:** Kud0x1
     
-![Challenge](https://raw.githubusercontent.com/AbdelruhmanAskar/0/refs/heads/master/assets/images/SODA3/Challenge.png)
+![Challenge](https://raw.githubusercontent.com/AbdelruhmanAskar/0/refs/heads/master/assets/images/Soda3/SODA3%20Challenge.png)
     
 * * *
 ### 📜 The Description
 > _"When nothing remains, everything becomes possible."_
 The challenge presents us with an **"Internal File Manager."** It seems simple: you can create files, view them, or reset the environment. But as we know, the most straightforward paths often have the most interesting locks.
 
-![File Manager](https://raw.githubusercontent.com/AbdelruhmanAskar/0/refs/heads/master/assets/images/SODA3/Dashboard.png)
+![File Manager](https://raw.githubusercontent.com/AbdelruhmanAskar/0/refs/heads/master/assets/images/Soda3/File%20Manager.png)
 * * *
 
 ### 🔍 Stage 1: The Gatekeeper (Reconnaissance)
 Upon entering the challenge, I saw a dashboard with a few options: **Create**, **Files**, and a **Reset** button. There was already a file named `flag` sitting there, but clicking it led to a dead end:
 > **Response:** You have to reset the files first!
 
-![Reset Error](https://raw.githubusercontent.com/AbdelruhmanAskar/0/refs/heads/master/assets/images/SODA3/Error.png)
+![Reset Error](https://raw.githubusercontent.com/AbdelruhmanAskar/0/refs/heads/master/assets/images/Soda3/Reset%20Flags.png)
 Naturally, I tried to hit the **Reset** button. I intercepted the request in **Burp Suite** to see what was happening under the hood.
 
 * * *
@@ -127,7 +127,7 @@ Naturally, I tried to hit the **Reset** button. I intercepted the request in **B
 The application was sending a `POST` request to `/reset`. However, the server responded with a cold:
 `HTTP/1.1 405 METHOD NOT ALLOWED`
 
-![Burp Request](https://raw.githubusercontent.com/AbdelruhmanAskar/0/refs/heads/master/assets/images/SODA3/Burp.png)
+![Burp Request](https://raw.githubusercontent.com/AbdelruhmanAskar/0/refs/heads/master/assets/images/Soda3/burp%20request.png)
 
 Looking at the `Allow` header in the response, the server dropped a huge hint:
 `Allow: HEAD, OPTIONS`
@@ -138,11 +138,10 @@ The standard `POST` method was disabled for resetting, but the server was still 
 ### 🔓 Stage 3: The HEAD Trick (Exploitation)
 A **HEAD** request is identical to a `GET` request, but the server returns only the headers and no body. Sometimes, developers forget to apply the same security restrictions to `HEAD` as they do to `POST` or `GET`.
 I decided to bypass the restriction using **cURL** to force a `HEAD` request to the reset endpoint:
-```bash
 
 curl -X HEAD [http://nightmare.offgrayeg.com](http://nightmare.offgrayeg.com):7878/reset
 
-![Curl Reset](https://raw.githubusercontent.com/AbdelruhmanAskar/0/refs/heads/master/assets/images/SODA3/Curl%20Reset.png)
+![Curl Reset](https://raw.githubusercontent.com/AbdelruhmanAskar/0/refs/heads/master/assets/images/Soda3/Curl%20Reset.png)
 
 The command executed successfully. Even though I didn't see a "Success" message (because HEAD doesn't return a body), the server-side logic was triggered, and the files were reset!
 * * *
@@ -153,6 +152,6 @@ Now that the "Reset" condition was satisfied, I went straight for the gold. I re
 bash
 curl [http://nightmare.offgrayeg.com](http://nightmare.offgrayeg.com):7878/flag
 
-![Flag](https://raw.githubusercontent.com/AbdelruhmanAskar/0/refs/heads/master/assets/images/SODA3/Flag.png)
+![Flag](https://raw.githubusercontent.com/AbdelruhmanAskar/0/refs/heads/master/assets/images/Soda3/Flag.png)
 
 The Flag: N!ghtM4re{H34D_Req_Ar3_N0t_Alw4ys_S4f3!!}
