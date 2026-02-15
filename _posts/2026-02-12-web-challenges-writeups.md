@@ -290,9 +290,7 @@ The system generated a card as expected. Given that the input is being reflected
 ### 🕵️ Stage 2: Probing the Walls (Filter Identification)
 
 To confirm SSTI and identify the template engine, I tried several payloads in the "Designation" field.
-The payload `{{7*7}}` was evaluated and returned `49`, confirming that the application is using the **Jinja2** (Python) template engine.
-
-However, as soon as I tried to escalate my probes, I hit a wall.
+The payload `\{\{7*7\}\}` was evaluated and returned `49`, confirming that the application is using the **Jinja2** (Python) template engine.
 
 * * *
 
