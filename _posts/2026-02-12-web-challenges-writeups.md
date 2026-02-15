@@ -306,8 +306,8 @@ After further testing, I compiled a list of forbidden elements:
 - `_` (Underscore)
 - `.` (Dot)
 - `[` and `]` (Brackets)
-- Keywords: `mro`, `base`, `class`, `subclasses`, `globals`, etc.
-
+- Keywords: `mro`, `base`, `class`, `base`, `[`, `]`, etc.
+  
 ![Keywords](https://raw.githubusercontent.com/AbdelruhmanAskar/0/refs/heads/master/assets/images/D0tless%20Pr1s0n/Keywords.png)
 
 * * *
