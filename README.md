@@ -25,15 +25,8 @@ I am a security enthusiast driven by curiosity and the thrill of breaking comple
 ---
 
 ### 🚩 Authored Challenges & Projects
+
 * **Writeups:** I document my journey and methodologies on my [Personal Blog](https://abdelruhmanaskar.github.io/0/).
-
----
-
-### 📊 My GitHub Universe
-<p align="left">
-<img src="https://github-readme-stats.vercel.app/api?username=abdelruhmanaskar&show_icons=true&theme=tokyonight" alt="Askar's Stats" />
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=abdelruhmanaskar&layout=compact&theme=tokyonight" alt="Top Languages" />
-</p>
 
 ---
 
