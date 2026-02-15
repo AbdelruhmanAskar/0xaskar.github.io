@@ -27,10 +27,8 @@ In this post, I’ll be breaking down web challenges, ranging from Basic to Hard
 *   **Challenge Name:** Bl1nd Fa1th
     
 *   **Difficulty:** Basic
-    
-*   **Points:** 50
-    
-*   **Author:** D3xter
+        
+*   **Author:** D3xter(https://www.linkedin.com/in/ahmed-gamal-ag113?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)
     
 * * *
 
@@ -102,7 +100,7 @@ The moment I hit **Login**, the system's defenses crumbled, granting me full acc
     
 *   **Difficulty:** Easy
     
-*   **Author:** Kud0x1
+*   **Author:** Kud0x1(www.linkedin.com/in/sondos-ayoub)
     
 ![Challenge](https://raw.githubusercontent.com/AbdelruhmanAskar/0/refs/heads/master/assets/images/Soda3/SODA3%20Challenge.png)
     
