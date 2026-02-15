@@ -162,6 +162,7 @@ The Flag: N!ghtM4re{H34D_Req_Ar3_N0t_Alw4ys_S4f3!!}
 
 ## 🚩 3. Challenge Write-up: 7ru57 155u35
 =========================================
+
 ### 🛠️ General Information
 
 *   **Challenge Name:** 7ru57 155u35
@@ -175,28 +176,34 @@ The Flag: N!ghtM4re{H34D_Req_Ar3_N0t_Alw4ys_S4f3!!}
 
 > _"A quiet system. A simple workflow. Or so it appears."_
 
+![Challenge](https://raw.githubusercontent.com/AbdelruhmanAskar/0/refs/heads/master/assets/images/7ru57%20155u35/Challenge.png)
+
 The challenge presents us with a minimalist web application. The initial message is simple: "Want some Coffee? Please register to continue..."
 
 It seems like a straightforward user registration flow, but in CTFs, the simplest workflows often hide the most interesting security flaws.
 
-![Dashboard](https://raw.githubusercontent.com/AbdelruhmanAskar/0/refs/heads/master/assets/images/7ru57_155u35/Challenge.png)
-* * *
+![Dashboard](https://raw.githubusercontent.com/AbdelruhmanAskar/0/refs/heads/master/assets/images/7ru57%20155u35/Register.png)
 
+* * *
 ### 🔍 Stage 1: The Coffee Break (Reconnaissance)
 
 I started by following the application's instructions and proceeded to the **Register** page. I created a standard account with the following credentials:
 
 - **Username:** `0xaskar`
 - **Password:** `0xaskar`
+
+![Register](https://raw.githubusercontent.com/AbdelruhmanAskar/0/refs/heads/master/assets/images/7ru57%20155u35/Sign%20Up.png)
   
 After registering and logging in, I was greeted with a "Welcome 0xaskar" message and a note saying "Everything looks normal... for now."
 
-![Register Page](https://raw.githubusercontent.com/AbdelruhmanAskar/0/refs/heads/master/assets/images/7ru57_155u35/Register.png)
+![Register Page](https://raw.githubusercontent.com/AbdelruhmanAskar/0/refs/heads/master/assets/images/7ru57_155u35/Welcome.png)
 
 * * *
 ### 🕵️ Stage 2: Decoding the Identity (Cookie Analysis)
 
 To understand how the application handles sessions, I intercepted the request in **Burp Suite**. I noticed a session cookie that looked like a typical **Flask** session or a **JWT**.
+
+![Burp Request](https://raw.githubusercontent.com/AbdelruhmanAskar/0/refs/heads/master/assets/images/7ru57_155u35/Request.png)
 
 I took the cookie to `jwt.io` to inspect its structure. The payload revealed two interesting fields:
 `
@@ -206,17 +213,21 @@ I took the cookie to `jwt.io` to inspect its structure. The payload revealed two
 }
 `
 
+![JWT.io](https://raw.githubusercontent.com/AbdelruhmanAskar/0/refs/heads/master/assets/images/7ru57_155u35/JWTio.png)
+
 The presence of an is_admin flag set to false immediately suggested that privilege escalation was the intended goal.
 
 🔨 Stage 3: Breaking the Seal (Brute-forcing Secret Key)
 
 Since the session was a signed Flask cookie, I couldn't just modify the is_admin flag without the Secret Key. I decided to attempt a brute-force attack on the signing key using flask-unsign and the rockyou.txt wordlist.
 
+![Bruteforce](https://raw.githubusercontent.com/AbdelruhmanAskar/0/refs/heads/master/assets/images/7ru57_155u35/Bruteforce.png)
+
 bash
 `
 flask-unsign --unsign --cookie 'eyJpc...[snip]...' --wordlist 'rockyou.txt'`
 
-The tool successfully cracked the key: Secret Key: chocolate
+The tool successfully cracked the key: Secret Key: `chocolate`
 
 🎭 Stage 4: The Masquerade (Session Hijacking)
 
@@ -226,11 +237,14 @@ bash
 
 `flask-unsign --sign --cookie "{'is_admin': True, 'username': '0xaskar'}" --secret 'chocolate'`
 
+![Cookie](https://raw.githubusercontent.com/AbdelruhmanAskar/0/refs/heads/master/assets/images/7ru57_155u35/Cookie.png)
 
 I replaced my original session cookie with this newly forged one in the browser's developer tools.
 
 🏆 Stage 5: Capturing the Flag
 
 After updating the cookie, I navigated to the /flag endpoint. The server, now convinced that I was the administrator, granted me access to the hidden treasure.
+
+![Flag](https://raw.githubusercontent.com/AbdelruhmanAskar/0/refs/heads/master/assets/images/7ru57_155u35/Flag.png)
 
 The Flag: N!ghtM4re{jw7_0r_fl45k_1_d0n7_c4r3!!}
