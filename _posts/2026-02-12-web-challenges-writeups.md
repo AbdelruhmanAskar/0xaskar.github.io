@@ -245,4 +245,4 @@ After updating the cookie, I navigated to the /flag endpoint. The server, now co
 
 ![Flag](https://raw.githubusercontent.com/AbdelruhmanAskar/0/refs/heads/master/assets/images/7ru57%20155u35/Flag.png)
 
-The Flag: N!ghtM4re{jw7_0r_fl45k_1_d0n7_c4r3!!}
+The Flag: `N!ghtM4re{jw7_0r_fl45k_1_d0n7_c4r3!!}`
