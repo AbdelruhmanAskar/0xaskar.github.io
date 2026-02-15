@@ -107,7 +107,8 @@ The moment I hit **Login**, the system's defenses crumbled, granting me full acc
 * * *
 ### 📜 The Description
 > _"When nothing remains, everything becomes possible."_
-The challenge presents us with an **"Internal File Manager."** It seems simple: you can create files, view them, or reset the environment. But as we know, the most straightforward paths often have the most interesting locks.
+
+The challenge presents us with an **"Internal File Manager."** It seems simple: you can create files or reset the environment. But as we know, the most straightforward paths often have the most interesting locks.
 
 ![File Manager](https://raw.githubusercontent.com/AbdelruhmanAskar/0/refs/heads/master/assets/images/Soda3/File%20Manager.png)
 * * *
